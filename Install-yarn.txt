@@ -1,0 +1,41 @@
+[How to install Yarn on Ubuntu 18.04 ]
+
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sudo apt update
+
+sudo apt install yarn
+
+//eslint.js
+module.exports = {
+  extends: "airbnb-base",
+  rules: {
+    "no-unused-vars": 1,
+    "comma-dangle": 0,
+    "eol-last": 0,
+    "no-console": 0,
+    "space-before-blocks": 0,
+    "no-extra-semi": 0,
+    "linebreak-style": 0,
+    quotes: 0,
+    "arrow-parens": 0
+  }
+};
+
+
+ yarn add --dev nodemon
+
+<...»ý·«...>
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "nodemon": "^1.18.9"
+  },
+  "scripts": {
+    "start": "node src",
+    "dev": "nodemon --watch src/ src/index.js"
+  }
+}
